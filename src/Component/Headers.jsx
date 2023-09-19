@@ -8,7 +8,7 @@ import logo from "../assets/logo.png";
 
 export const Headers = () => {
   const [open, setOpen] = useState(true);
-  const [open1,setOpen1] = useState(false)
+  const [open1,setOpen1] = useState(true)
   const handler1 = ()=>{
     setOpen1(!open1)
   }
