@@ -14,7 +14,8 @@ const Hero = () => {
     slidesToScroll: 1
   };
   return (
-    <div className="md:container md:m-auto" >
+    <div className="relative">
+      <div className="md:container md:m-auto" >
       <Slider {...settings}>
         <div className="w-screen">
             
@@ -30,6 +31,7 @@ const Hero = () => {
         </div>
       </Slider>
      </div>
+    </div>
   );
 };
 

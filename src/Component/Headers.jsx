@@ -8,7 +8,7 @@ import logo from "../assets/logo.png";
 
 export const Headers = () => {
   const [open, setOpen] = useState(true);
-  const [open1,setOpen1] = useState(false)
+  const [open1,setOpen1] = useState(true)
   const handler1 = ()=>{
     setOpen1(!open1)
   }
@@ -27,9 +27,9 @@ export const Headers = () => {
     {title:'Health & Beauty',link:'/health'},
   ]
   return (
-    <div className="absolute top-0 z-50 w-screen">
+    <div className={`absolute z-50 md:relative w-screen`}>
       <div
-        className={`md:flex p-4 transition-all ease-in duration-500 justify-between relative  shadow-lg ${
+        className={`md:flex p-4 bg-white transition-all ease-in duration-500 justify-between relative  shadow-lg ${
           open ? "top-0" : "-top-96"
         }`}
       >
