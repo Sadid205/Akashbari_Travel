@@ -39,7 +39,7 @@ const Tours = () => {
         <br />
         <br />
         <br />
-        <div className="grid gap-14 md:gap-2 md:grid-cols-4">
+        <div className="grid gap-14 md:gap-4 md:grid-cols-4">
           {Container.map((image, index) => (
             <div
               className="transition-all duration-300 ease-in hover:cursor-pointer hover:-translate-y-10"
