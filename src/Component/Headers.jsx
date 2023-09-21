@@ -29,14 +29,21 @@ export const Headers = () => {
   return (
     <div className={`absolute z-50 md:relative w-screen`}>
       <div
-        className={`md:flex p-4 bg-white transition-all ease-in duration-500 justify-between relative  shadow-lg ${
+        className={`md:flex p-4 bg-white transition-all ease-in duration-500 justify-evenly relative  shadow-lg ${
           open ? "top-0" : "-top-96"
         }`}
       >
-        <div onClick={handler1} className="flex items-center hover:cursor-pointer">
+        <div onClick={handler1} className="relative flex items-center hover:cursor-pointer">
           <span>
             {open1?<span className="text-black"><ArrowForwardIosIcon/></span>:<span className="text-black"><DensitySmallIcon /></span>}
           </span>
+          <div className={`bg-white absolute md:w-56 lg:w-72 transition-all z-50 ease-in duration-500 ${!open?'top-8':'md:top-16 top-48'} ${ open1 ? '-left-5': '-left-96 md:hidden'}`}>
+        <ul className="p-4 shadow-md">
+            {listItem.map((item,index)=>(
+                <li className="p-1" key={index}><a href={item.link}>{item.title}</a><span className="ml-10">{item.icon}</span></li>
+            ))}
+        </ul>
+      </div>
         </div>
         <div>
           <img src={logo} alt="logo" />
@@ -69,13 +76,6 @@ export const Headers = () => {
         <span>
           {open? <span className="text-black"><CloseIcon/></span> :<span className="text-black"><DensityMediumIcon /></span>}
         </span>
-      </div>
-      <div className={`bg-white absolute transition-all z-50 ease-in duration-500 ${!open?'top-8':'top-22'} ${ open1 ? 'left-0': '-left-96'}`}>
-        <ul className="p-4 shadow-md">
-            {listItem.map((item,index)=>(
-                <li className="p-1" key={index}><a href={item.link}>{item.title}</a><span className="ml-10">{item.icon}</span></li>
-            ))}
-        </ul>
       </div>
     </div>
   );
