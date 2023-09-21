@@ -58,11 +58,13 @@ const TopPackage = () => {
 
   return (
     <div className="mt-20 md:m-auto md:container">
-        <h1 className="text-3xl font-semibold text-black">Top Package</h1>
+       
         <br />
+        <br />
+        <h1 className="text-3xl font-semibold text-black">Top Package</h1>
       <Slider {...settings}>
         {Items.map((item,index)=>(
-            <div className="w-screen" key={index}>
+            <div className="w-screen p-4" key={index}>
                 <a href={item.link}><img className="w-full" src={item.coll} alt="img" /></a>
             </div>
         ))}

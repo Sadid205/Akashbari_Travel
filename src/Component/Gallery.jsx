@@ -79,7 +79,7 @@ const Gallery = () => {
         <Slider ref={slider} {...settings}>
           {Picture.map((item, index) => (
             <div key={index}>
-              <div className="transition-all duration-300 ease-in hover:-translate-y-5">
+              <div className="p-4 transition-all duration-300 ease-in hover:-translate-y-5">
                 <img src={item} alt="image" />
               </div>
             </div>
